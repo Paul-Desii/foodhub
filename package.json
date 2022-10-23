@@ -1,4 +1,22 @@
+
 {
+  "name": "foodhubwebapp",
+  "homepage": "https://Paul-Desii.github.io/foodhub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss build -i tailwind.css -o ./layouts/css/styles.css",
+    "prod": "NODE_ENV=production npx tailwindcss build -i tailwind.css -o ./layouts/css/styles.css",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+
   "devDependencies": {
     "gh-pages": "^4.0.0",
     "tailwindcss": "^3.2.1"
